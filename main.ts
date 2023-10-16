@@ -6,18 +6,16 @@
 */
 
 // Variables
-let temperature : number
-let temperatureKelvin : number
+let temperature: number = input.temperature()
+let temperatureKelvin: number = (temperature + 273.15)
 
+// Clean up
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function() {
-  //input
-  temperature = input.temperature()
-
-  //Process
-  temperatureKelvin = (temperatureKelvin + 273.15)
+  // Process
+  temperature = (temperatureKelvin + 273.15)
   temperatureKelvin = Math.round(temperatureKelvin)
 
  // output
